@@ -1,1 +1,13 @@
-<p>search works!</p>
+<div>
+  <form #searchForm="ngForm" (ngSubmit)="search(searchForm)">
+    <label for="searchTerm"></label>
+    <input
+      type="text"
+      id="searchTerm"
+      name="searchTerm"
+      placeholder="Whattaya Wanna Watch?"
+      ngModel
+    />
+    <button>Search</button>
+  </form>
+</div>
