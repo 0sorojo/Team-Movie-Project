@@ -11,3 +11,14 @@
     <button>Search</button>
   </form>
 </div>
+<div>
+  <form>
+    <label for="genre">Select a Genre</label>
+    <select name="genre" id="genre">
+      <option *ngFor="let genre of genres" value="{{ genre.id }}">{{
+        genre.name
+      }}</option>
+    </select>
+    <button>push me</button>
+  </form>
+</div>

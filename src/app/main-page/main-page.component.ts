@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchService } from '../search.service';
 import { ActivatedRoute } from '@angular/router';
-import { NgControlStatus } from '@angular/forms';
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
