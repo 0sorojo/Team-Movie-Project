@@ -11,14 +11,14 @@ import { SearchService } from '../search.service';
 export class SearchComponent implements OnInit {
   genres: any;
 
-  constructor(private route: Router, private service: SearchService) {}
+  constructor(private router: Router, private service: SearchService) { }
 
   ngOnInit(): void {
     this.getGenres();
   }
 
   search = (form: NgForm) => {
-    this.route.navigate(['mainpage'], {
+    this.router.navigate(['mainpage'], {
       queryParams: {
         term: form.value.searchTerm,
       },
@@ -31,4 +31,14 @@ export class SearchComponent implements OnInit {
       this.genres = response.genres;
     });
   };
+
+  setDiscoverQueryParams = (form: NgForm): any => {
+    this.router.navigate(['mainpage'], {
+      queryParams: {
+        genre: form.value.genre,
+      }
+    })
+  }
+
+
 }

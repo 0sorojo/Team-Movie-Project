@@ -8,20 +8,30 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MainPageComponent implements OnInit {
   movies: any;
-  constructor(private route: ActivatedRoute, private service: SearchService) {}
+  // genres: any;
+
+
+  constructor(private route: ActivatedRoute, private service: SearchService) { }
 
   ngOnInit(): void {
-    this.getMovies();
+    this.discoverMovies();
   }
 
-  getMovies = () => {
+  discoverMovies = () => {
     this.route.queryParamMap.subscribe((params) => {
-      console.log('This is what we look at', params.get('term'));
+      let genre = params.get("genre");
       let term = params.get('term');
-      this.service.getSearch(term).subscribe((response) => {
-        console.log(response.results);
-        this.movies = response.results;
-      });
-    });
-  };
+      if (term) {
+        this.service.getSearch(term).subscribe((response) => {
+          this.movies = response.results;
+        });
+      }
+      else {
+        this.service.discoverMovies(genre).subscribe((response) => {
+          this.movies = response.results;
+        })
+      }
+    })
+  }
+
 }

@@ -1,20 +1,14 @@
 <div>
   <form #searchForm="ngForm" (ngSubmit)="search(searchForm)">
     <label for="searchTerm"></label>
-    <input
-      type="text"
-      id="searchTerm"
-      name="searchTerm"
-      placeholder="Whattaya Wanna Watch?"
-      ngModel
-    />
+    <input type="text" id="searchTerm" name="searchTerm" placeholder="Whattaya Wanna Watch?" ngModel />
     <button>Search</button>
   </form>
 </div>
 <div>
-  <form>
+  <form #discoverForm="ngForm" (ngSubmit)="setDiscoverQueryParams(discoverForm)">
     <label for="genre">Select a Genre</label>
-    <select name="genre" id="genre">
+    <select name="genre" id="genre" ngModel>
       <option *ngFor="let genre of genres" value="{{ genre.id }}">{{
         genre.name
       }}</option>
