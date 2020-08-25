@@ -1,2 +1,6 @@
 <app-header></app-header>
-<app-movie-card *ngFor="let movie of selectedMovies" [movieRef]="movie"></app-movie-card>
+<app-movie-card
+  *ngFor="let movie of selectedMovies: index as i"
+  [movieRef]="movie"
+  (click)=""
+></app-movie-card>

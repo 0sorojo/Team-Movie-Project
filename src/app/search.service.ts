@@ -1,23 +1,21 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-
 @Injectable({
   providedIn: 'root',
 })
 export class SearchService {
   getMovies(genre: string) {
-    throw new Error("Method not implemented.");
+    throw new Error('Method not implemented.');
   }
   baseUrl: string = 'https://api.themoviedb.org/3/search/movie';
   key: string = 'c56a8f474bae1a00470aa7c17e389e57';
   genreBaseUrl: string = 'https://api.themoviedb.org/3/genre/movie/list';
-  discoverURL: string = "https://api.themoviedb.org/3/discover/movie";
+  discoverURL: string = 'https://api.themoviedb.org/3/discover/movie';
 
   favoriteMovies: any[] = [];
 
-
-  constructor(private search: HttpClient) { }
+  constructor(private search: HttpClient) {}
 
   getSearch = (searchTerm: string): any => {
     return this.search.get(this.baseUrl, {
@@ -45,16 +43,18 @@ export class SearchService {
         ['vote_average.gte']: rating,
       },
     });
-  }
+  };
 
   getFavorites = () => {
     return this.favoriteMovies;
-  }
+  };
 
   addFavorite = (movie: any) => {
     this.favoriteMovies.unshift(movie);
     console.log(this.favoriteMovies);
-  }
+  };
 
-
+  onDelete = (index: number) => {
+    this.favoriteMovies.splice(index, 1);
+  };
 }
