@@ -17,6 +17,4 @@ export class MovieCardComponent implements OnInit {
   addFavoriteMovie = () => {
     this.added.emit();
   }
-
-
 }

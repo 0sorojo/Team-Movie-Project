@@ -13,11 +13,11 @@ export class WatchListComponent implements OnInit {
   constructor(private service: SearchService, private router: Router) { }
 
   ngOnInit(): void {
-    this.getFavoriteMovie();
+    this.getFavoriteMovies();
   }
 
-  getFavoriteMovie() {
+  getFavoriteMovies() {
     this.selectedMovies = this.service.getFavorites();
+    console.log(this.selectedMovies);
   }
-
 }
