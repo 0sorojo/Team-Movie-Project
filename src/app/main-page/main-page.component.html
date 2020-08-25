@@ -1,6 +1,4 @@
 <header></header>
 <app-search></app-search>
-<app-movie-card
-  *ngFor="let movie of movies"
-  [movieRef]="movie"
-></app-movie-card>
+<app-movie-card (added)="addFavorite(movie)" *ngFor="let movie of movies" [movieRef]="movie">
+</app-movie-card>

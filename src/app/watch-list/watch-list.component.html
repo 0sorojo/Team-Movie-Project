@@ -1,4 +1,2 @@
 <app-header></app-header>
-
-
-<p>watch-list works!</p>
+<app-movie-card *ngFor="let movie of selectedMovies" [movieRef]="movie"></app-movie-card>
