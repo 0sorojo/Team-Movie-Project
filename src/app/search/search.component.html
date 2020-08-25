@@ -7,12 +7,16 @@
 </div>
 <div>
   <form #discoverForm="ngForm" (ngSubmit)="setDiscoverQueryParams(discoverForm)">
-    <label for="genre">Select a Genre</label>
+    <label for="genre">What's It Genre' Be?</label>
     <select name="genre" id="genre" ngModel>
       <option *ngFor="let genre of genres" value="{{ genre.id }}">{{
         genre.name
       }}</option>
     </select>
-    <button>push me</button>
+
+    <label for="rating">Whattaya rating for?</label>
+
+    <input type="text" id="rating" name="rating" ngModel>
+    <button>Leggo'</button>
   </form>
 </div>

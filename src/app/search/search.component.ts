@@ -36,6 +36,7 @@ export class SearchComponent implements OnInit {
     this.router.navigate(['mainpage'], {
       queryParams: {
         genre: form.value.genre,
+        rating: form.value.rating,
       }
     })
   }

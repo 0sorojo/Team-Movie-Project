@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchService } from '../search.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-watch-list',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./watch-list.component.css']
 })
 export class WatchListComponent implements OnInit {
+  selectedMovies: any[] = [];
 
-  constructor() { }
+  constructor(private service: SearchService, private router: Router) { }
 
   ngOnInit(): void {
+    this.getFavoriteMovies();
   }
 
+  getFavoriteMovies() {
+    this.selectedMovies = this.service.getFavorites();
+    console.log(this.selectedMovies);
+  }
 }

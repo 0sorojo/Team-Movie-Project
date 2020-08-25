@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { SearchService } from '../search.service';
 
 @Component({
   selector: 'app-movie-card',
@@ -7,7 +8,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MovieCardComponent implements OnInit {
   @Input() movieRef: any;
-  constructor() {}
+  @Output() added = new EventEmitter<void>();
 
-  ngOnInit(): void {}
+  constructor(private service: SearchService) { }
+
+  ngOnInit(): void { }
+
+  addFavoriteMovie = () => {
+    this.added.emit();
+  }
 }
