@@ -9,12 +9,15 @@ import { SearchService } from '../search.service';
 export class MovieCardComponent implements OnInit {
   @Input() movieRef: any;
   @Output() added = new EventEmitter<void>();
+  @Output() deleted = new EventEmitter<void>();
+  constructor(private service: SearchService) {}
 
-  constructor(private service: SearchService) { }
-
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   addFavoriteMovie = () => {
     this.added.emit();
+  };
+  deleteMovie() {
+    this.deleted.emit();
   }
 }

@@ -1,9 +1,13 @@
 <div>
   <p>{{ movieRef.title }}</p>
-  <img src="https://image.tmdb.org/t/p/w220_and_h330_face{{
+  <img
+    src="https://image.tmdb.org/t/p/w220_and_h330_face{{
       movieRef.poster_path
-    }}" alt="Image Does Not Exist!" />
-  <p>Rating: {{movieRef.vote_average}}</p>
-  <p>{{movieRef.overview}}</p>
+    }}"
+    alt="Image Does Not Exist!"
+  />
+  <p>Rating: {{ movieRef.vote_average }}</p>
+  <p>{{ movieRef.overview }}</p>
   <button (click)="addFavoriteMovie()" class="heart">heart</button>
+  <button (click)="deleteMovie(i)" class="delete">X</button>
 </div>
