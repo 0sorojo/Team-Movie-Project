@@ -1,4 +1,10 @@
 <app-header></app-header>
 <app-search></app-search>
-<app-movie-card (added)="addFavorite(movie)" *ngFor="let movie of movies" [movieRef]="movie">
-</app-movie-card>
+<div class="big-container">
+  <app-movie-card
+    (added)="addFavorite(movie)"
+    *ngFor="let movie of movies"
+    [movieRef]="movie"
+  >
+  </app-movie-card>
+</div>

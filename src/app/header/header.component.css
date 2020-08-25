@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(to top, #1b3b6f, white);
+  align-items: center;
+  padding: 10px;
+}
+.list {
+  display: flex;
+  list-style: none;
+}
+
+.item {
+  padding: 10px;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.circles {
+  border: black solid 1px;
+  border-radius: 5px;
+  padding: 5px;
+  background: linear-gradient(to bottom, #9eb3c2, white);
+}
+
+.cinema {
+  text-shadow: 0px 3px #9eb3c2;
+  letter-spacing: 5px;
+  font-size: 40px;
+  margin-left: 20px;
+}
