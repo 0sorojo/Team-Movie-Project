@@ -1,0 +1,14 @@
+.movie-card {
+  padding: 5px;
+  border: black solid 1px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.overview {
+  display: none;
+}
+
+.title {
+  text-align: center;
+}
