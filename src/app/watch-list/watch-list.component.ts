@@ -21,7 +21,7 @@ export class WatchListComponent implements OnInit {
     console.log(this.selectedMovies);
   }
 
-  getDelete = () => {
-    this.selectedMovies = this.service.onDelete();
+  removeFavorite = (index: number) => {
+    this.selectedMovies.splice(index, 1);
   };
 }
