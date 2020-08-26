@@ -1,0 +1,13 @@
+.big-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background: linear-gradient(to bottom, #1b3b6f, #9eb3c2);
+  height: 100%;
+}
+.go-home {
+  height: 100vh;
+  text-align: center;
+  padding: 15px;
+  color: white;
+}

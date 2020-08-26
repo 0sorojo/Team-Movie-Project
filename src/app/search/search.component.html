@@ -1,6 +1,10 @@
 <section class="main-div">
   <div class="form-div">
-    <form #searchForm="ngForm" (ngSubmit)="search(searchForm)">
+    <form
+      class="input-styly"
+      #searchForm="ngForm"
+      (ngSubmit)="search(searchForm)"
+    >
       <label for="searchTerm"></label>
       <input
         class="input-styly"
@@ -10,17 +14,15 @@
         placeholder="Wanna' be watchin sumthin'"
         ngModel
       />
-      <button>Search</button>
+      <button class="btn">Search</button>
     </form>
-  </div>
-
-  <div class="form-div">
     <form
+      class="input-styly"
       #discoverForm="ngForm"
       (ngSubmit)="setDiscoverQueryParams(discoverForm)"
     >
       <label for="genre"></label>
-      <select name="genre" id="genre" class="input-styly" ngModel>
+      <select name="genre" id="genre" class="input-styly genre" ngModel>
         <option value="" selected>What's It Genre Be</option>
         <option *ngFor="let genre of genres" value="{{ genre.id }}">
           {{ genre.name }}
@@ -37,7 +39,7 @@
         ngModel
       />
 
-      <button>Leggo'</button>
+      <button class="btn">Leggo'</button>
     </form>
   </div>
 </section>

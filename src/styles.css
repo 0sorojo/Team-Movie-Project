@@ -10,3 +10,7 @@ p {
   margin: 0;
   font-family: "Gloria Hallelujah", cursive;
 }
+button {
+  cursor: pointer;
+  font-family: "Gloria Hallelujah", cursive;
+}

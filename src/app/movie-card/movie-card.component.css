@@ -28,3 +28,18 @@
 .image {
   align-items: center;
 }
+.btn {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: blue;
+  font-size: larger;
+  flex: 1;
+  outline: none;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+}
+.buttons {
+  display: flex;
+}
