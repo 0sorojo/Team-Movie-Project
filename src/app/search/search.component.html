@@ -1,22 +1,43 @@
-<div>
-  <form #searchForm="ngForm" (ngSubmit)="search(searchForm)">
-    <label for="searchTerm"></label>
-    <input type="text" id="searchTerm" name="searchTerm" placeholder="Whattaya Wanna Watch?" ngModel />
-    <button>Search</button>
-  </form>
-</div>
-<div>
-  <form #discoverForm="ngForm" (ngSubmit)="setDiscoverQueryParams(discoverForm)">
-    <label for="genre">What's It Genre' Be?</label>
-    <select name="genre" id="genre" ngModel>
-      <option *ngFor="let genre of genres" value="{{ genre.id }}">{{
-        genre.name
-      }}</option>
-    </select>
+<section class="main-div">
+  <div class="form-div">
+    <form #searchForm="ngForm" (ngSubmit)="search(searchForm)">
+      <label for="searchTerm"></label>
+      <input
+        class="input-styly"
+        type="text"
+        id="searchTerm"
+        name="searchTerm"
+        placeholder="Wanna' be watchin sumthin'"
+        ngModel
+      />
+      <button>Search</button>
+    </form>
+  </div>
 
-    <label for="rating">Whattaya rating for?</label>
+  <div class="form-div">
+    <form
+      #discoverForm="ngForm"
+      (ngSubmit)="setDiscoverQueryParams(discoverForm)"
+    >
+      <label for="genre"></label>
+      <select name="genre" id="genre" class="input-styly" ngModel>
+        <option value="" selected>What's It Genre Be</option>
+        <option *ngFor="let genre of genres" value="{{ genre.id }}">
+          {{ genre.name }}
+        </option>
+      </select>
 
-    <input type="text" id="rating" name="rating" ngModel>
-    <button>Leggo'</button>
-  </form>
-</div>
+      <label for="rating"></label>
+      <input
+        class="input-styly"
+        type="text"
+        id="rating"
+        name="rating"
+        placeholder="Whattaya rating for?"
+        ngModel
+      />
+
+      <button>Leggo'</button>
+    </form>
+  </div>
+</section>

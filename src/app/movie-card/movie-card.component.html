@@ -1,13 +1,19 @@
 <div class="movie-card">
-  <p class="title">{{ movieRef.title }}</p>
-  <img
-    src="https://image.tmdb.org/t/p/w220_and_h330_face{{
-      movieRef.poster_path
-    }}"
-    alt="Image Does Not Exist!"
-  />
-  <p>Rating: {{ movieRef.vote_average }}</p>
-  <p class="overview">{{ movieRef.overview }}</p>
-  <button (click)="addFavoriteMovie()" class="heart">heart</button>
-  <button (click)="deleteMovie()" class="delete">X</button>
+  <div class="words">
+    <p class="title">{{ movieRef.title }}</p>
+  </div>
+  <div class="image">
+    <img
+      src="https://image.tmdb.org/t/p/w220_and_h330_face{{
+        movieRef.poster_path
+      }}"
+      alt="Image Does Not Exist!"
+    />
+  </div>
+  <div>
+    <p>Rating: {{ movieRef.vote_average }}</p>
+    <p class="overview">{{ movieRef.overview }}</p>
+    <button (click)="addFavoriteMovie()" class="heart">heart</button>
+    <button (click)="deleteMovie()" class="delete">X</button>
+  </div>
 </div>
