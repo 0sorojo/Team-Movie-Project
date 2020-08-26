@@ -1,9 +1,15 @@
 <app-header></app-header>
-<app-movie-card
-  *ngFor="let movie of selectedMovies; index as i"
-  [movieRef]="movie"
-  (deleted)="removeFavorite(i)"
-></app-movie-card>
-<h1 *ngIf="selectedMovies.length === 0" routerLink="/mainpage" class="go-home">
-  Add some movies to your watchlist from the home page!
-</h1>
+<section class="big-container">
+  <app-movie-card
+    *ngFor="let movie of selectedMovies; index as i"
+    [movieRef]="movie"
+    (deleted)="removeFavorite(i)"
+  ></app-movie-card>
+  <h1
+    *ngIf="selectedMovies.length === 0"
+    routerLink="/mainpage"
+    class="go-home"
+  >
+    Add some movies to your watchlist from the home page!
+  </h1>
+</section>

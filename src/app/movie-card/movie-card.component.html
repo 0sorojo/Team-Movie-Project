@@ -10,10 +10,12 @@
       alt="Image Does Not Exist!"
     />
   </div>
-  <div>
+  <div class="card">
     <p>Rating: {{ movieRef.vote_average }}</p>
     <p class="overview">{{ movieRef.overview }}</p>
-    <button (click)="addFavoriteMovie()" class="heart">heart</button>
-    <button (click)="deleteMovie()" class="delete">X</button>
+    <div class="buttons">
+      <button (click)="addFavoriteMovie()" class="far fa-heart btn"></button>
+      <button (click)="deleteMovie()" class="fas fa-trash btn"></button>
+    </div>
   </div>
 </div>
