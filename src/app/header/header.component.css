@@ -4,6 +4,7 @@
   background: linear-gradient(to top, #1b3b6f, white);
   align-items: center;
   padding: 10px;
+  flex-direction: column;
 }
 .list {
   display: flex;

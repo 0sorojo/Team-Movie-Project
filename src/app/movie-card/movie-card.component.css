@@ -1,8 +1,12 @@
 .movie-card {
-  padding: 5px;
-  border: black solid 1px;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  padding: 30px;
+  border: black solid 5px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
 }
 
 .overview {
@@ -11,4 +15,16 @@
 
 .title {
   text-align: center;
+  height: auto;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.words {
+  width: 100px;
+  white-space: nowrap;
+}
+
+.image {
+  align-items: center;
 }
