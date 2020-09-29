@@ -9,7 +9,7 @@ export class SearchService {
     throw new Error('Method not implemented.');
   }
   baseUrl: string = 'https://api.themoviedb.org/3/search/movie';
-  key: string = 'c56a8f474bae1a00470aa7c17e389e57';
+  key: string = 'Api_key';
   genreBaseUrl: string = 'https://api.themoviedb.org/3/genre/movie/list';
   discoverURL: string = 'https://api.themoviedb.org/3/discover/movie';
   trendingURL: string = 'https://api.themoviedb.org/3/movie/popular';
